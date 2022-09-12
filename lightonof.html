@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        img{
+            
+            margin-right: 40px;
+        }
+        #on{
+            background-color: darkmagenta;
+            font-size: 1.4rem;
+            padding: 10px 20px;
+            color: #fff;
+        }
+        #of{
+            background-color: rgb(139, 0, 30);
+            font-size: 1.4rem;
+            padding: 10px 20px;
+            color: #fff;
+        }
+        .btn{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1 id="title">Light of</h1>
+    </div>
+    <img id="light1" src="img/pic_bulboff.gif" width="130" height="200" alt="">
+    <img id="light2" src="img/pic_bulboff.gif" width="130" height="200" alt="">
+    <img id="light3" src="img/pic_bulboff.gif" width="130" height="200" alt="">
+    <img id="light4" src="img/pic_bulboff.gif" width="130" height="200" alt="">
+    <img id="light5" src="img/pic_bulboff.gif" width="130" height="200" alt="">
+    <div class="btn">
+        <button id="on" onclick="lightBtn(1)">on</button>
+        <button id="of" onclick="lightBtn(0)">of</button>
+    </div>
+    <script>
+        function lightBtn(match){
+            var title = document.getElementById('title');
+            var pic;
+            for (i=1; i<=5; i++){
+                if(match==0){
+                    pic = 'img/pic_bulboff.gif';
+                    title.innerHTML = 'Light Off'
+                }else{
+                   pic = 'img/pic_bulbon.gif';
+                   title.innerHTML = 'Light ON'
+                }
+                var light = document.getElementById('light'+(i));
+                light.src = pic;
+            }
+        }
+
+    </script>
+</body>
+</html>

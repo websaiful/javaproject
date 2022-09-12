@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name">my name is saiful islam</h1>
+    <input type="text" id="hexanumber">
+    <input type="color" id="color">
+    <script>
+        var hexaNumer = document.getElementById('hexanumber');
+        var color = document.getElementById('color');
+        color.addEventListener('input',function(){
+            var inputNum = color.value;
+             hexaNumer.value = inputNum;
+            document.getElementById('name').style.color = inputNum; 
+            // document.body.style.background = inputNum;
+        })
+    </script>
+</body>
+</html>

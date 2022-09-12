@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <!-- <input type="number" id="bangla" placeholder="input number"><br><br>
+    <input type="number" id="math" placeholder="input number"><br><br> -->
+    <button onclick="total()">click me</button>
+    </form>
+    <p>total=<span id="demo"></span></p>
+    <script>
+// var bangla = +document.getElementById('bangla').value;
+// var math = +document.getElementById('math').value;
+// var btn = document.getElementById('btn');
+var bangla = +prompt('enter number');
+var math = +prompt('enter number');
+function total(){
+    document.getElementById('demo').innerHTML = bangla + math;
+};
+
+    </script>
+</body>
+</html>

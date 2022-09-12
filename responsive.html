@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive navbar</title>
+    <script src="https://kit.fontawesome.com/8f037f1f1d.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+         
+            height: 100vh;
+            background: #3d3d3d;
+        }
+        nav{
+            background: crimson;
+            width: 200px;
+            height: 400px;
+            padding-right: 40px;
+            text-transform: capitalize;
+            border-radius: 10px;
+            box-shadow: 5px 5px white;
+        }
+        nav ul{
+            list-style-type: none;
+            /* text-align: center; */
+            }
+            nav ul li{
+                margin: 30px;
+                background: #474787;
+                padding:10px 20px;
+                text-align: center;
+                border-radius: 5px;
+              
+            }
+            @media (max-width:992px){
+                nav{
+                    display: block;
+                };
+            };
+            @media (max-width:768px){
+                nav{
+                    display: none;
+                };
+            };
+            @media (max-width:400px){
+                nav{
+                    
+                    display: none;
+                    
+                };
+            };
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <i class="fas fa-bars"></i>
+    </div>
+    <!-- <div>
+        <i class="fas fa-times"></i>
+    </div> -->
+    <header>
+        <nav>
+            <ul>
+                <li>Abu sayed</li>
+                <li>shahida akhter</li>
+                <li>nahida akhter</li>
+                <li>saiful islam</li>
+                <li>jahidul islam</li>
+            </ul>
+        </nav>
+    </header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="responsive.js"></script>
+</body>
+</html>

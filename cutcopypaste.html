@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input type="text" id="copy" value="click here to cpy text">
+  <button id="copyBtn">click me copy text</button><br><br>
+
+  <input type="text" id="cut" value="click button to cut text">
+  <button id="cutBtn">cut</button><br><br>
+
+  <input type="text" id="paste">
+  <button id="pasteBtn">click me</button>
+  <p id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda provident tenetur doloribus distinctio laudantium perspiciatis sit beatae sed accusantium adipisci!</p>
+  <button id="bt">click</button>
+  <script>
+    var copy_text = document.getElementById('copy').value;
+    var copyBtn = document.getElementById('copyBtn');
+    copyBtn.addEventListener('click',function(){
+        navigator.clipboard.writeText(copy_text);
+        alert('copy success');
+    })
+    var cut = document.getElementById('cut');
+    var cutBtn = document.getElementById('cutBtn');
+
+    cutBtn.addEventListener('click',function(){
+        navigator.clipboard.writeText(cut.value);
+        cut.value ='';
+    })
+
+    var paste = document.getElementById('paste');
+    var pasteBtn = document.getElementById('pasteBtn');
+
+    pasteBtn.addEventListener('click',function(){
+        paste.value = '';
+        navigator.clipboard.readText().then(function(text){
+               paste.value = text;
+        })
+    })
+
+    var lorem = document.getElementById('lorem');
+    var bt = document.getElementById('bt')
+    bt.addEventListener('click',function(){
+        navigator.clipboard.write(lorem);
+        alert('copied')
+    })
+  </script>
+</body>
+</html>

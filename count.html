@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+            text-align: center;
+            float: left;
+            margin-right: 20px;
+            text-transform: capitalize;
+            color: #fff;
+        }
+        h4{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h2>total project</h2>
+        <h4 id="project"></h4>
+    </div>
+    <div class="div1">
+        <h2>total client</h2>
+        <h4 id="client"></h4>
+    </div>
+    <div class="div1">
+        <h2>total complete</h2>
+        <h4 id="complete"></h4>
+    </div>
+    <script>
+    var count = 0;
+    var project = setInterval(project,10)
+    function project(){
+        count++;
+        document.getElementById('project').innerHTML = count;
+        if (count==200){
+            
+            clearInterval(project);
+           
+        }
+     
+    }
+    var count2 = 0;
+    var client = setInterval(client,10)
+    function client(){
+        count2++;
+        document.getElementById('client').innerHTML = count2;
+        if (count2==400){
+            
+            clearInterval(client);
+           
+        }
+     
+    }
+    var count3 = 0;
+    var complete = setInterval(complete,10)
+    function complete(){
+        count3++;
+        document.getElementById('complete').innerHTML = count3;
+        if (count3==600){
+            
+            clearInterval(complete);
+           
+        }
+     
+    }
+    
+    </script>
+</body>
+</html>
