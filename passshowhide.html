@@ -5,20 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .modal{
+            background-color: blue;
+            height: 400px;
+            width: 400px;
+            text-align: center;
+            opacity: 0;
+        }
+        .modal.show{
+            opacity: 1;
+        }
+        .modal p{
+            color: #fff;
+        }
+
+    </style>
 </head>
 <body>
-    <input type="password" id="password"><br><br>
-    <input type="checkbox" onclick="mypass()"> Show password
+    <input type="password" id="pass"><br>
+    <input type="checkbox" onclick="mypass()"> show password
+    <div class="modal" id="modal">
+        <h1>modal</h1>
+        <hr>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas perferendis alias consectetur omnis ratione molestiae iste provident reiciendis ipsum cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod adipisci iste eum quae nobis molestias pariatur accusantium aut quis perspiciatis expedita labore corporis commodi quidem maiores incidunt neque quaerat dolorem aperiam, amet quo. Ab, maiores voluptate ipsa quibusdam aspernatur quia nihil, nesciunt ullam, aut alias deleniti sit et reprehenderit velit. </p>
+         <button id="close">close</button>
+    </div>
+    <button id="open">open</button>
     <script>
-        var pass = document.getElementById('password');
+        var pass = document.getElementById('pass');
         function mypass(){
-            if(pass.type=='password'){
+            if (pass.type == 'password'){
                 pass.type = 'text';
             }else{
                 pass.type = 'password';
             }
-
         }
+        var modal = document.getElementById('modal');
+        var open = document.getElementById('open');
+        var close = document.getElementById('close');
+        open.addEventListener('click',function(){
+            modal.classList.add('show');
+        }); 
+        close.addEventListener('click',function(){
+            modal.classList.remove('show');
+        });
     </script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">light OF</h1>
+    <button onclick="myclass(1)">on</button>
+    <button onclick="myclass(0)">of</button>
+    <img id="imag" src="img/pic_bulboff.gif" width="220" height="220" alt="">
+    
+    <script>
+
+        
+        function myclass(match){
+            var image = document.getElementById('imag');
+            var lightOn = document.getElementById('title')
+            
+        
+            var pic;
+            if (match == 0){
+                pic = 'img/pic_bulboff.gif';
+                lightOn.innerHTML = 'Light OF';
+                
+            }else{
+                pic = 'img/pic_bulbon.gif';
+                lightOn.innerHTML = 'Light ON';
+            }
+            image.src = pic;
+        }
+        
+    </script>
+</body>
+</html>
