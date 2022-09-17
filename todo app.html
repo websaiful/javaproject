@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #todo-div{
+            width: 400px;
+            height: 400px;
+            background-color: bisque;
+            box-shadow: 3px 3px 5px gray;
+
+        }
+        #todo-div h1{
+            text-align: center;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="input">
+        <button id="add">add</button>
+    </div>
+    <div id="todo-div">
+        <h1>todo app</h1>
+        <ol id="item">
+            <li>banana</li>
+            <li>apple</li>
+        </ol>
+    </div>
+    <script>
+        var add = document.getElementById('add');
+        add.addEventListener('click',function(){
+            olitem = document.getElementById('item');
+           var input = document.getElementById('input').value;
+           var txt = document.createTextNode(input);
+           var eliment = document.createElement('li');
+           eliment.appendChild(txt);
+           olitem.appendChild(eliment);
+
+        })
+    </script>
+</body>
+</html>
+
