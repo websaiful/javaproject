@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.C.Q</title>
+</head>
+<body>
+    <h1>সঠিক উওর দিয়ে যেনে নিন আপনার স্কোর কতো?</h1>
+    <form action="">
+        <p>১। বিসিবির প্রধান মাদারচোদ কে ?</p>
+        <input type="radio" name="q1" id="q1">নাজমুল হাসান পাপন <br>
+        <input type="radio" name="q1">মিনহাজুল আবেদিন নান্নু<br>
+        <input type="radio" name="q1">হাবিবুল বাশার<br>
+        <input type="radio" name="q1">খালেদ মাহমুদ সুজন
+        <p>২। মাহমুদুল্লাহ কে বাদ দিলো কেনো?</p>
+        <input type="radio" name="q2" id="q2">খারাপ খেলার কারনে <br>
+        <input type="radio" name="q2">ওপরে লোক না থাকার কারনে<br>
+        <input type="radio" name="q2">বেশি অভিগ্গ হওয়ার কারনে<br>
+        <input type="radio" name="q2">নাকি মাহমুদুল্লাহ বুড়ো হয়ে গেছে
+        <p>৩। নাজমুল হোসেন শান্ত যদি খারাপ খেলে সেটা কাদের দোষ?</p>
+        <input type="radio" name="q3">বাংলাদেশের মানুষের বড় দোয়ার কারনে <br>
+        <input type="radio" name="q3" id="q3">নাকি মাহমুদুল্লাহ বউয়ের বড় দোয়ার কারনে<br>
+        <input type="radio" name="q3">নাকি মুশফিকের বউয়ের বড় দোয়ার কারনে <br>
+        <input type="radio" name="q3">নাকি বলারের কারনে
+        <p>৪। নগদের কর্মকর্তা সুলাইমান সুখনকে কোন বাংলা ছবিতে দেখা যায়?</p>
+        <input type="radio" name="q4" id="q4">মিঃ বাংলাদেশ <br>
+        <input type="radio" name="q4">বড্ড ভালোবাসি<br>
+        <input type="radio" name="q4">ছিনতাই কারি <br>
+        <input type="radio" name="q4">দিন দ্যা ডে
+        <p>৫। অনন্ত জলিল ও বর্ষা বর্তমানে কোথায় আছে?</p>
+        <input type="radio" name="q5">বাংলাদেশ <br>
+        <input type="radio" name="q5">কেনিয়া<br>
+        <input type="radio" name="q5">উগান্ডা <br>
+        <input type="radio" name="q5" id="q5">মালয়েশিয়া
+        <p>৬। বাংলাদেশের কোন মুভিকে পবিএ বলে দাবি করেন ছবির নায়ক ও অন্যান্যরা?</p>
+        <input type="radio" name="q6">পরান <br>
+        <input type="radio" name="q6">দিন দ্যা ডে<br>
+        <input type="radio" name="q6" id="q6">ভাইয়ারে <br>
+        <input type="radio" name="q6">কলা বিবি
+
+         
+    </form><br>
+    <button id="submit">জমা দিন</button>
+    <script>
+        var submit = document.getElementById('submit');
+        submit.addEventListener('click',function(){
+            var q1 = document.getElementById('q1').checked;
+            var q2 = document.getElementById('q2').checked;
+            var q3 = document.getElementById('q3').checked;
+            var q4 = document.getElementById('q4').checked;
+            var q5 = document.getElementById('q5').checked;
+            var q6 = document.getElementById('q6').checked;
+            var count = 0;
+            if(q1){
+                count++
+            }
+            if(q2){
+                count++
+            }
+            if(q3){
+                count++
+            }
+            if(q4){
+                count++
+            }
+            if(q5){
+                count++
+            }
+            if(q6){
+                count++
+            }
+            alert('আপনার স্কোর হলো '+ count + ' || উওর:১।ক,2।ক,৩।খ,৪।ক,৫।ঘ,৬।গ');
+        })
+    </script>
+</body>
+</html>
