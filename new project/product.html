@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+            color: #fff;
+        }
+        .parent-div{
+            width: 1000px;
+            margin: auto;
+            display: flex;
+        }
+        .product{
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            box-shadow: 5px 5px 5px gray;
+            text-align: center;
+            margin: 30px auto;
+            border-radius: 10px;
+            padding-top: 20px;
+        }
+        #total{
+            color: black;
+            padding: 10px 30px;
+            margin-top: 10px;
+        }
+        #total2{
+            color: black;
+            padding: 10px 30px;
+            margin-top: 10px;
+        }
+        input{
+            height: 25px;
+            border-radius: 5px;
+            border: none;
+            color: black;
+            padding-left: 10px;
+        }
+        p{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-div">
+        <div class="product">
+            <h2>product discount calculate</h2><br>
+            <p>product price : <input id="price" type="text"></p><br>
+            <p>product discount : <input id="discount" type="text" value="%"></p>
+            <button id="total">total</button><br><br>
+            <h2>discount price : <span id="presentprice"></span></h2>
+        </div>
+        <div class="product">
+            <h2>sallary bonus calculator</h2><br>
+            <p>sallary : <input type="text" id="sallary"></p><br>
+            <p>bonus : <input type="text" id="bonus" value="%"></p>
+            <button id="total2">total</button><br><br>
+            <h2>total amount with bonus : <span id="amount"></span></h2>
+        </div>
+    </div>
+    
+    <script>
+        var price = document.getElementById('price');
+        var discount = document.getElementById('discount');
+        var total = document.getElementById('total');
+
+        total.addEventListener('click',function(){
+            if (price.value == ''){
+                alert('put product price')
+            }
+            else if (discount.value == ''){
+                alert('put discount amount')
+            }else{
+                var Newprice = parseInt(price.value);
+                var Newdiscount = parseInt(discount.value);
+                var Oneparcent = Newprice/100;
+                var total = Oneparcent*Newdiscount;
+                var Totalamount = Newprice-total;
+                var presentprice = document.getElementById('presentprice');
+
+                presentprice.innerHTML = Totalamount +" taka";
+            }
+        });
+
+        var sallary = document.getElementById('sallary');
+        var bonus = document.getElementById('bonus');
+        var total2 = document.getElementById('total2');
+        total2.addEventListener('click',function(){
+            if(sallary.value == ''){
+              alert('put sallary amount')
+            }
+            else if(bonus.value == ''){
+              alert('put bonus amount')
+            }else{
+                var Newsallary = parseInt(sallary.value);
+                var Newbonus = parseInt(bonus.value);
+                var Oneparcent = Newsallary/100;
+                var total = Oneparcent*Newbonus;
+                var Totalamount = Newsallary+total;
+                var amount = document.getElementById('amount');
+
+                amount.innerHTML = Totalamount+ ' taka';
+
+            };
+        });
+
+
+    </script>
+</body>
+</html>

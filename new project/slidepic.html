@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide picture</title>
+    <script src="https://kit.fontawesome.com/8f037f1f1d.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .slider{
+            
+           
+            position: relative;
+            width: 600px;
+            margin: 50px auto;
+         
+            
+        }
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        .prev{
+            position: absolute;
+            top: 150px;
+            left: 0;
+            font-size: 30px;
+            color: crimson;
+           
+        }
+        .next{
+            position: absolute;
+            top: 150px;
+            right: 0;
+            font-size: 30px;
+            color: crimson;
+           
+        }
+        @media (max-width:668px){
+            .slider{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                width: 100%;
+            }
+        }
+        @media only screen and (min-width:689px) and (max-width:992px){
+            .slider{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                width: 80%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <img id="img" src="img/1.jpg" alt=""><br>
+        <i class="fa-solid fa-angle-left prev"onclick="prev()"></i>
+        <i class="fa-solid fa-angle-right next"onclick="next()"></i>
+        
+    </div>
+    <script>
+        var img = document.getElementById('img');
+        var image = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'];
+        var index = 0;
+        var imgLen = image.length;
+        
+        function next(){
+            index++
+           
+            if (index >= imgLen){
+                index = 0;
+                img.src =image[index];
+                console.log(index);
+            }else{
+                img.src =image[index];
+                console.log(index);
+            }
+        }
+        function prev(){
+            index--
+            if (index<0){
+                index = imgLen -1;
+                img.src =image[index];
+               
+
+            }else{
+                img.src =image[index];
+                // console.log(index);
+            }
+
+        }
+    </script>
+</body>
+</html>

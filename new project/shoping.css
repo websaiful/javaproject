@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+}
+.all-parent{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    width: 800px;
+    box-shadow: 5px 5px 10px grey;
+    margin-top: 50px;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    
+}
+.shping-title{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: blue;
+}
+.grand-parent{
+    display: flex;
+    justify-content: center;
+    
+}
+.card-img{
+    width: 400px;
+    box-shadow: 3px 3px 8px gray;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+.card-img img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px 3px gray;
+}
+.product-dtails{
+    margin-left: 30px;
+}
+.product-dtails p:nth-child(1) {
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.product-dtails h4{
+    font-size: 25px;
+    margin: 10px 0;
+}
+.product-dtails p:nth-child(3) {
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.icon{
+    font-size: 30px;
+    border-radius: 50%;
+    margin-top: 20px;
+    
+}
+.icon:hover{
+    background-color: green;
+}
+.input{
+    padding: 10px;
+    font-size: 20px;
+    margin: 0 10px;
+    background-color: coral;
+    border-radius: 5px;
+    border: none;
+}
+.item{
+    margin-left: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+hr{
+    margin: 15px 0;
+    height: 5px;
+}
+/* second container code start here */
+.second-container{
+    width: 400px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px gray;
+    margin-top: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+.second-container h2:nth-child(2){
+    text-transform: capitalize;
+    margin-left: 15px;
+    margin-top: 45px;
+}
+.second-container h2:nth-child(3){
+    text-transform: capitalize;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.second-container p:nth-child(4){
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.second-container p:nth-child(5){
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: teal;
+    margin-top: 10px;
+}
+.second-container p:nth-child(6){
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: teal;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+.coupon-input{
+    margin-left: 15px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 10px;
+    text-transform: capitalize;
+    padding-left: 5px;
+}
+#apply{
+    background-color: rgb(228, 39, 5);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: capitalize;
+}

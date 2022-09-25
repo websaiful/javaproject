@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+        .timer{
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="timer">
+              <h2 id="day">01</h2>
+              <h2>day</h2>
+        </div>
+        <div class="timer">
+              <h2 id="hour">01</h2>
+              <h2>hour</h2>
+        </div>
+        <div class="timer">
+              <h2 id="minute">01</h2>
+              <h2>minute</h2>
+        </div>
+        <div class="timer">
+              <h2 id="second">01</h2>
+              <h2>second</h2>
+        </div>
+    </div>
+    <script>
+     var days = document.getElementById('day');
+     var hours = document.getElementById('hour');
+     var minutes = document.getElementById('minute');
+     var seconds = document.getElementById('second');
+     function count(){
+        var Newtime = new Date('2022-10-05');
+        var Newday = new Date();
+        var totalTime = (Newtime-Newday)/1000;
+        var day = Math.floor(totalTime/3600/24);
+        var hour = Math.floor(totalTime/3600) % 24;
+        var minute = Math.floor(totalTime/60) % 60;
+        var second = Math.floor(totalTime) % 60;
+
+        days.innerHTML = day;
+        hours.innerHTML = hour;
+        minutes.innerHTML = minute;
+        seconds.innerHTML = second;
+
+
+     }
+     setInterval(count,1000)
+    </script>
+</body>
+</html>

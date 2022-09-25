@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shoping.css">
+    <script src="https://kit.fontawesome.com/8f037f1f1d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="all-parent">
+
+    
+    <div class="container">
+        <h2 class="shping-title">saiful shoping cart</h2>
+        <div class="grand-parent">
+            <div class="parent-div">
+                <div class="card-img">
+                     <img src="img/cheeseburger-bread_720x560.jpg" alt="">
+                </div>
+            </div>
+            <div class="product-dtails">
+               <p>chicken burger</p>
+               <h4>size : 6"</h4>
+               <p>price : $ <span id="price">200</span> </p>
+               <i class="fas fa-plus icon" onclick="increament('count','price','item')"></i>
+               <input class="input" type="button" value="0" id="count">
+               <i class="fas fa-minus icon" onclick="decreament('count','price','item')"></i> <span class="item">your item $ <span id="item">00</span> </span>
+    
+            </div>
+        </div>
+        <hr>
+        <div class="grand-parent">
+            <div class="parent-div">
+                <div class="card-img">
+                     <img src="img/pizza-pepperoni-cheese-salami-vegetables-58914487.jpg" alt="">
+                </div>
+            </div>
+            <div class="product-dtails">
+               <p>chicken pizza</p>
+               <h4>size : 12"</h4>
+               <p>price : $ <span id="price1">600</span> </p>
+               <i class="fas fa-plus icon" onclick="increament('count1','price1','item1')"></i>
+               <input class="input" type="button" value="0" id="count1">
+               <i class="fas fa-minus icon" onclick="decreament('count1','price1','item1')"></i> <span class="item">your item $ <span id="item1">00</span> </span>
+    
+            </div>
+        </div>
+    </div>
+    <div class="second-container">
+         <h1 class="shping-title">the total amount of</h1>
+         <h2>product ammount : $ <span id="pr_amount">00</span></h2>
+         <h2>delivary charge : $ <span id="charge">20</span></h2>
+         ---------------------------------------------------------------------------
+         <p>total product amount : $ <span id="total"></span></p>
+         <div id="kupon_main_div">
+            <p>kupon code with 50tk less</p>
+            <p>your code is : 937400</p>
+            <input class="coupon-input" id="kuponinput" type="text" placeholder="your kupon code">
+            <button id="apply">apply</button>
+         </div>
+         
+    </div>
+</div>
+<script src="shoping.js"></script>
+</body>
+</html>

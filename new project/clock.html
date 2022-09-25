@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            margin: 200px  auto;
+            display: flex;
+        }
+        .timer{
+            /* border: 1px solid red; */
+            text-align: center;
+            margin: 0 10px;
+        }
+        #hours{
+            font-size: 100px;
+        }
+        #minute{
+            font-size: 100px;
+        }
+        #second{
+            font-size: 100px;
+        }
+        #sesson{
+            font-size: 100px;
+        }
+        span{
+            font-size: 100px;
+            margin: 65px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="timer">
+            <h2 id="hours">00</h2>
+            <!-- <h2>hours</h2> -->
+
+        </div>
+        <span>:</span>
+        <div class="timer">
+            <h2 id="minute">00</h2>
+            <!-- <h2>minute</h2> -->
+        </div>
+        <span>:</span>
+        <div class="timer">
+            <h2 id="second">00</h2>
+            <!-- <h2>second</h2> -->
+            </div>
+        <div class="timer">
+            
+            <h2 id="sesson"></h2>
+
+
+        </div>
+    </div>
+    <script>
+        function watch(){
+            var currentTime = new Date();
+            var hrs = currentTime.getHours();
+            var min = currentTime.getMinutes();
+            var sec = currentTime.getSeconds();
+            var sesson = document.getElementById('sesson')
+
+             if(hrs > 12){
+                hrs = hrs - 12;
+             }
+
+             if (hrs > 12){
+                sesson.innerHTML = 'AM';
+             }else{
+                sesson.innerHTML = 'PM';
+             }
+            
+            document.getElementById('hours').innerHTML = hrs;
+            document.getElementById('minute').innerHTML = min;
+            document.getElementById('second').innerHTML = sec;
+        }
+        setInterval(watch,1000)
+    </script>
+</body>
+</html>
