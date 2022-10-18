@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Computer</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <style>
+        *{
+            margin: 0px;
+        }
+        body{
+            background-image: url(images/bg.jpg) ;
+            background-color: black;
+            
+            background-repeat: no-repeat, repeat;
+            background-size: cover;
+        }
+        .full{
+            width:100%;
+            height:700px;
+            background-color: black;
+            opacity: 0.7;
+          text-align: center;
+          
+        }
+        h1{
+          text-shadow: 1px 1px 1px white;
+        }
+        .time_box{
+          padding: 10px;
+          border: 1px solid white;
+          display: inline-block;
+          color:white;
+        }
+        .email{
+          border-radius: 10px;
+          
+        }
+        input{
+          height: 25px;
+          width: 300px;
+        }
+        .sub{
+          height: 30px;
+          width: 128px;
+          border-radius: 10px;
+          margin-top: 0px;
+          font-weight: 800;
+          font-style: bold;
+          
+          padding-bottom: 10px;
+          font-size: 15px;
+          background-color:yellow;
+          color:black;
+          
+        }
+        @media only screen and (max-width: 800px) {
+  
+    .full{
+            width:100%;
+            height:600px;
+            background-color: black;
+            opacity: 0.7;
+          text-align: center;
+          
+        }
+  
+}
+        
+    </style>
+</head>
+<body>
+    
+  <div class="full">
+    
+    <img style="width:100px; height:100px;" src="images/logo.png" alt="">
+    <h1 style="color:red; font-size: 50px; font-weight: 600;">Coming Soon....</h1>
+    <span style="color:white" > Abdullah Compuet Training Institute</span> <br> <br>
+
+    
+    <div class="time_box">
+      <div style="display: inline-block;" class="point"> <h2 id="days">01</h2>
+                             <h2  style="display: inline-block;">Day</h2>
+        </div>
+     
+        </div>
+
+    <div class="time_box">
+      <div style="display: inline-block;" class="point"> <h2 id="Hours">01</h2>
+                             <h2 style="display: inline-block;">Hours</h2>
+        </div>
+     
+        </div>
+    <div class="time_box">
+      <div style="display: inline-block;" class="point"> <h2 id="mins">01</h2>
+                             <h2 style="display: inline-block;">Minuts</h2>
+        </div>
+     
+        </div>
+    <div class="time_box">
+      <div style="display: inline-block;" class="point"> <h2 id="seconds">01</h2>
+                             <h2 style="display: inline-block;">Seconds</h2>
+        </div>
+     
+        </div>
+        <br>
+        <br>
+        <form action="" method="post">
+          <input placeholder="Type Your Email....." class="email" name="email" type="email"> 
+
+          <input type="submit" class="sub" value="Subscrib Now">
+        </form>
+        <br>
+        <p> <strong style="color:white">Development By </strong> <a style="color:white" href="https://www.facebook.com/technician.jakir">Technician Jakir</a> </p>
+
+  </div>
+
+<script>
+    
+function countdown(){
+
+   
+    
+const eidday =new Date("2022-08-20");
+
+
+
+const currentday = new Date();
+const totaltime = (eidday - currentday)/1000;
+const days = Math.floor(totaltime / 3600/24);
+const hours = Math.floor(totaltime / 3600) % 24;
+const mins = Math.floor(totaltime / 60) % 60;
+
+const seconds = Math.floor(totaltime ) % 60;
+
+
+
+
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("Hours").innerHTML = hours;
+document.getElementById("mins").innerHTML = mins;
+document.getElementById("seconds").innerHTML = seconds;
+
+
+}
+
+countdown();
+setInterval(countdown, 1000);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
